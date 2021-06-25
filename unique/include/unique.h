@@ -16,15 +16,35 @@ namespace graal {
 template<class InputIt, class Equal>
 InputIt unique( InputIt first, InputIt last, Equal eq )
 {
-    InputIt aux;
+    
+    InputIt result;
+    bool test;
+
     for (InputIt i = first; i != last; i++)
     {
-        aux = i++;
-        if(eq(*i, *aux) == true){
-            
+        test = false;
+        for (InputIt j = first; j != i; j++)
+        {
+        
+            if((distance(i, j) != 0) && (eq(*i,*j) == true))
+            {
+                test = true; 
+            }
         }
+        
+        if (test == false)
+        {
+            result = i;
+            result++;
+        }
+        
     }
+    last = result;
     return last;
+
+    
+    
+    
 }
 
 }
