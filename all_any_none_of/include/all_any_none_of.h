@@ -11,7 +11,14 @@ using std::sort;
 namespace graal {
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * @tparam InputIt iterator para o range.
+ * @tparam UnaryPredicate o tipo de um função bool.
+ * 
+ * @param first Ponteiro para o primeiro elemento do range.
+ * @param last Ponteiro para a posição logo após o último elemento do range.
+ * @param p Uma função que retorna true quando uma determinada condição é satisfeita ou falso caso contrário.
+ * 
+ * @return Retorna verdadeiro se todos os elementos do range satisfazem p, falso caso contrário.
  */
 template<class InputIt, class UnaryPredicate>
 bool all_of(InputIt first, InputIt last, UnaryPredicate p)
@@ -33,7 +40,14 @@ bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 }
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * @tparam InputIt iterator para o range.
+ * @tparam UnaryPredicate o tipo de um função bool.
+ * 
+ * @param first Ponteiro para o primeiro elemento do range.
+ * @param last Ponteiro para a posição logo após o último elemento do range.
+ * @param p Uma função que retorna true quando uma determinada condição é satisfeita ou falso caso contrário.
+ * 
+ * @return Retorna verdadeiro se ao menos um elemento do range satisfaz p, falso caso contrário.
  */
 template<class InputIt, class UnaryPredicate>
 bool any_of(InputIt first, InputIt last, UnaryPredicate p)
@@ -50,7 +64,14 @@ bool any_of(InputIt first, InputIt last, UnaryPredicate p)
 }
 
 /*! 
- * TODO: documentação no estilo doxygen
+ * @tparam InputIt iterator para o range.
+ * @tparam UnaryPredicate o tipo de um função bool.
+ * 
+ * @param first Ponteiro para o primeiro elemento do range.
+ * @param last Ponteiro para a posição logo após o último elemento do range.
+ * @param p Uma função que retorna true quando uma determinada condição é satisfeita ou falso caso contrário.
+ * 
+ * @return retorna verdadeiro se todos os elementos do range não satisfazem p, falso caso contrário.
  */
 template<class InputIt, class UnaryPredicate>
 bool none_of(InputIt first, InputIt last, UnaryPredicate p)
