@@ -20,7 +20,7 @@ void reverse(BidirIt first, BidirIt last)
     j--;
     for (BidirIt i = first; i != last; i++)
     {
-        *first = *j;
+        *first = *j; //blz, o problema é que vc perdeu quem era o primeiro elemento...
         first++;
         j--;
         

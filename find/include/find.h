@@ -20,12 +20,15 @@ namespace graal {
  * 
  * @return Um iterator(ou ponteiro) para o primeiro elemento que satisfaz a função eq().
  */
+ /*
+ blz
+ */
 template<class InputIt, class T, class Equal>
 InputIt find(InputIt first, InputIt last, const T& value, Equal eq)
 {
     for (InputIt i = first; i != last; i++)
     {
-        if(eq(*i, value) == true){
+        if(eq(*i, value) == true){ //aqui vc faz if(eq(*i, value)) ...
             return i;
         }
     }

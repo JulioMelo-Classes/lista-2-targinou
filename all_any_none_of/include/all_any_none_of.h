@@ -20,6 +20,10 @@ namespace graal {
  * 
  * @return Retorna verdadeiro se todos os elementos do range satisfazem p, falso caso contrário.
  */
+
+ /*
+ blz!
+ */
 template<class InputIt, class UnaryPredicate>
 bool all_of(InputIt first, InputIt last, UnaryPredicate p)
 {
@@ -27,7 +31,7 @@ bool all_of(InputIt first, InputIt last, UnaryPredicate p)
     for (InputIt i = first; i != last; i++)
     {
         teste = 1;
-        if(p(*i) == false){
+        if(p(*i) == false){ //aqui vc poderia testar if(!p(*i))
             return false;
         }
 

@@ -23,6 +23,9 @@ namespace graal {
  * 
  * @return Verdadeiro se os ranges são iguais, falso caso contrário.
  */
+ /*
+ 90% vc deveria documentar a versão sobrecarregada da função separadamente
+ */
 template<class InputIt1, class InputIt2, class Equal>
 bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, Equal eq)
 {
@@ -34,7 +37,7 @@ bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, Equal eq)
         for (InputIt2 j = first2; j != (first2 + (last1 - first1)); j++)
         {
             if(eq(*i, *j)){
-            cont++;
+            cont++; //!!!
             }
         }  
     }
@@ -59,7 +62,7 @@ bool equal(InputIt1 first1, InputIt1 last1,
         for (InputIt2 j = first2; j != last2; j++)
         {
             if(eq(*i, *j)){
-            cont++;
+            cont++;  //!!!
             }
         }  
     }

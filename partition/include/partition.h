@@ -21,6 +21,9 @@ namespace graal {
  * 
  * @return
  */
+ /*
+ 95% faltou documentar o retorno
+ */
 template<class ForwardIt, class UnaryPredicate>
 ForwardIt partition(ForwardIt first, ForwardIt last, UnaryPredicate p)
 {
